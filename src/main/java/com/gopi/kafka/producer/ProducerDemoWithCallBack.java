@@ -1,11 +1,10 @@
 /**
- * Created With Love By Gopi on 08-Mar-2020
+ * Created by gopinath_mb on 05-Jun-2020
  */
-package com.gopi.udemy.kafka;
+package com.gopi.kafka.producer;
 
 import java.util.Properties;
 
-import org.apache.commons.math3.analysis.function.Log;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -16,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Gopi
+ * @author gopinath_mb
  */
 public class ProducerDemoWithCallBack
 {
@@ -35,7 +34,7 @@ public class ProducerDemoWithCallBack
 
 		for (int i = 0; i < 20; i++)
 		{
-			ProducerRecord<String, String> record = new ProducerRecord<String, String>("first_topic", "helloWorld "+i);
+			ProducerRecord<String, String> record = new ProducerRecord<String, String>("first_topic", "helloWorld from Eclipse with Callback =>"+i);
 
 			producer.send(record, new Callback()
 			{
