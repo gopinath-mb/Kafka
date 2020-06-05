@@ -1,7 +1,7 @@
 /**
  * Created by gopinath_mb on 05-Jun-2020
  */
-package com.gopi.kafka.producer;
+package com.gopi.kafka.basics.producer;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;

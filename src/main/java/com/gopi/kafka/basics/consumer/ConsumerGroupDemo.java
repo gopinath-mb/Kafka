@@ -1,7 +1,7 @@
 /**
  * Created by gopinath_mb on 05-Jun-2020
  */
-package com.gopi.kafka.consumer;
+package com.gopi.kafka.basics.consumer;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -18,10 +18,14 @@ import org.slf4j.LoggerFactory;
 /**
  * @author gopinath_mb
  */
-public class ConsumerDemo
+public class ConsumerGroupDemo
 {
+  /**
+   * 
+   */
+  private static final String MY_FIRST_GROUP = "my-second-group";
   private static final Logger LOGGER = LoggerFactory
-      .getLogger(ConsumerDemo.class);
+      .getLogger(ConsumerGroupDemo.class);
 
   public static void main(String[] args)
   {
@@ -35,7 +39,7 @@ public class ConsumerDemo
         StringDeserializer.class.getName());
     properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
         StringDeserializer.class.getName());
-    properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "my-first-group");
+    properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, MY_FIRST_GROUP);
     properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
     // Create Kakfa consumer
